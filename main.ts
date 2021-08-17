@@ -34,9 +34,9 @@ images.createBigImage(`
     . . . # # # . . # #
     `).scrollImage(1, 200)
 images.createBigImage(`
-    . . . . # # . # . .
     . . . . . . . . . .
-    . . # . . # . . . .
+    . . . . . . . . . .
+    . . # . . . . . . .
     . . . . . . . . . .
     . . . # # . . . . .
     `).scrollImage(1, 200)
