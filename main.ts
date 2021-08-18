@@ -43,7 +43,6 @@ images.createBigImage(`
 music.playMelody("G B A G C5 B A B ", 139)
 mkAst()
 mkAst2()
-mkAst3()
 game.setLife(3)
 ship = game.createSprite(0, 0)
 basic.forever(function () {
@@ -65,11 +64,6 @@ basic.forever(function () {
     }
     ast2.move(1)
     ast2.ifOnEdgeBounce()
-    if (ship.isTouching(ast2)) {
-        game.removeLife(1)
-    }
-    ast3.move(1)
-    ast3.ifOnEdgeBounce()
     if (ship.isTouching(ast2)) {
         game.removeLife(1)
     }
