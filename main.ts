@@ -1,7 +1,3 @@
-function mkAst3 () {
-    ast3 = game.createSprite(randint(0, 4), randint(0, 4))
-    ast3.turn(Direction.Right, randint(0, 359))
-}
 function mkAst () {
     asteroid = game.createSprite(randint(0, 4), randint(0, 4))
     asteroid.turn(Direction.Right, randint(0, 359))
@@ -11,6 +7,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     speed += 2
+    scor += 5
     game.setScore(scor)
 })
 input.onButtonPressed(Button.B, function () {
@@ -23,7 +20,6 @@ function mkAst2 () {
 let ast2: game.LedSprite = null
 let scor = 0
 let asteroid: game.LedSprite = null
-let ast3: game.LedSprite = null
 let ship: game.LedSprite = null
 let speed = 0
 images.createBigImage(`
@@ -67,5 +63,5 @@ basic.forever(function () {
     if (ship.isTouching(ast2)) {
         game.removeLife(1)
     }
-    scor += 1
+    scor += -1
 })
